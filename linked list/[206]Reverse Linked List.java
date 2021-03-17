@@ -52,11 +52,12 @@
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
-        ListNode next = null;
         ListNode cur = head;
         while(cur != null){
-            next = cur.next;
+            ListNode next = cur.next;
             cur.next = prev;
+            //if double linked, add the code below
+            //cur.prev = next;
             prev = cur;
             cur = next;
         }
